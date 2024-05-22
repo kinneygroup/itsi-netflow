@@ -21,59 +21,59 @@ NetFlow monitoring encompasses several specialized services, each targeting spec
 
 1. Network Traffic Analysis
     * Description: This service is responsible for the overall analysis of network traffic, including the collection, processing, and visualization of NetFlow data.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 2. Flow Collection
     * Description: This service handles the collection of NetFlow data from various network devices.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 3. Flow Processing
     * Description: This service processes the collected NetFlow data, including parsing, aggregation, and enrichment.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 4. Flow Visualization
     * Description: This service is responsible for visualizing the processed NetFlow data, providing dashboards and reports for network analysis.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 5. Flow Exporters
     * Description: This service involves the network devices configured to export NetFlow data to the collection service.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 
 ### KPIs
 Each service utilizes specific KPIs to measure its effectiveness:
 
 1. Flow Records Collected Count
     * Description: Number of flow records collected from network devices.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 2. Collection Latency
     * Description: Time taken to collect flow records from network devices.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 3. Collection Errors Count
     * Description: Number of errors encountered during the collection of flow records.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 4. Processed Flow Records Count
     * Description: Number of flow records successfully processed.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 5. Processing Latency
     * Description: Time taken to process flow records.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 6. Processing Errors Count
     * Description: Number of errors encountered during the processing of flow records.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 7. Dashboard Load Time
     * Description: Time taken to load visualization dashboards.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 8. Visualization Errors Count
     * Description: Number of errors encountered in visualizing flow data.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 9. Visualization Latency
     * Description: Time taken to visualize processed flow data.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 10. Exporter Availability
     * Description: Availability status of flow exporters.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 11. Exported Flow Records Count
     * Description: Number of flow records exported by network devices.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 12. Exporter Errors Count
     * Description: Number of errors encountered by flow exporters.
-    * Source: [service-tree-concept.txt](../../itsi-docs-library/netflow/files/service-tree-concept.txt)
+    
 
 ### Relationships
 #### Dependencies:
@@ -112,7 +112,7 @@ For more information about Kinney Group's Splunk Products, visit our [website](h
 
 | Version | Date  | Description                |
 |---------|-------|----------------------------|
-| -.-.-   | -/-/- | Initial Preview Release    |
+| 0.0.1   | 05/21/24 | Initial Preview Release    |
 
 ## Considerations:
 
