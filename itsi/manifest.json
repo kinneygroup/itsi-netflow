@@ -1,0 +1,11 @@
+{
+    "service_templates": [],
+    "services": [
+        "da-itsi-cp-atlas-netflownetwork-traffic-analysis.json",
+        "da-itsi-cp-atlas-netflowflow-collection.json",
+        "da-itsi-cp-atlas-netflowflow-processing.json",
+        "da-itsi-cp-atlas-netflowflow-visualization.json",
+        "da-itsi-cp-atlas-netflowflow-exporters.json"
+    ],
+    "kpi_base_searches": []
+}
