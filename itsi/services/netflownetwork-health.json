@@ -27,10 +27,10 @@
             "recommended": false
         }
     },
-    "description": "This service is responsible for the overall analysis of network traffic, including the collection, processing, and visualization of NetFlow data.",
+    "description": "Overall health of the network infrastructure.",
     "enabled": false,
     "entity_rules": [],
-    "key": "da-itsi-cp-atlas-netflownetwork-traffic-analysis",
+    "key": "netflownetwork-health",
     "kpis": [
         {
             "adaptive_thresholding_training_window": "-7d",
@@ -111,7 +111,7 @@
             "anomaly_detection_training_window": "-7d",
             "backfill_earliest_time": "-7d",
             "backfill_enabled": false,
-            "base_search": "`get_full_itsi_summary_service_health_events(da-itsi-cp-atlas-netflownetwork-traffic-analysis)`",
+            "base_search": "`get_full_itsi_summary_service_health_events(netflownetwork-health)`",
             "base_search_id": null,
             "base_search_metric": null,
             "cohesive_ad": {
@@ -201,7 +201,7 @@
             "is_filter_entities_to_service": false,
             "is_recommended_time_policies": false,
             "is_split_by_entity": false,
-            "key": "SHKPI-da-itsi-cp-atlas-netflownetwork-traffic-analysis",
+            "key": "SHKPI-netflownetwork-health",
             "kpi_base_search": "",
             "kpi_template_kpi_id": "",
             "kpi_threshold_template_id": "",
@@ -211,20 +211,20 @@
                 "metric_name": ""
             },
             "recommendation_training_window": "-30d",
-            "search": "`get_full_itsi_summary_service_health_events(da-itsi-cp-atlas-netflownetwork-traffic-analysis)` | stats latest(health_score) AS aggregate",
-            "search_aggregate": "`get_full_itsi_summary_service_health_events(da-itsi-cp-atlas-netflownetwork-traffic-analysis)` | stats latest(health_score) AS aggregate",
+            "search": "`get_full_itsi_summary_service_health_events(netflownetwork-health)` | stats latest(health_score) AS aggregate",
+            "search_aggregate": "`get_full_itsi_summary_service_health_events(netflownetwork-health)` | stats latest(health_score) AS aggregate",
             "search_alert": "",
             "search_alert_earliest": "15",
             "search_alert_entities": "",
             "search_buckets": "",
             "search_entities": null,
             "search_occurrences": 1.0,
-            "search_time_compare": "`get_full_itsi_summary_service_health_events(da-itsi-cp-atlas-netflownetwork-traffic-analysis)` [| stats count | addinfo | eval search= \"earliest=\" + tostring(info_min_time-(info_max_time-info_min_time))+ \" latest=\" + tostring(info_max_time) |fields search] | addinfo | eval bucket=if(_time<info_max_time-((info_max_time-info_min_time)/2), \"last_window\", \"current_window\") | stats avg(health_score) AS aggregate BY bucket | reverse | delta aggregate AS window_delta | search bucket=current_window | eval window_direction=if(window_delta >0, \"increase\", if(window_delta < 0, \"decrease\", \"none\"))",
-            "search_time_series": "`get_full_itsi_summary_service_health_events(da-itsi-cp-atlas-netflownetwork-traffic-analysis)` | timechart avg(health_score) AS aggregate",
-            "search_time_series_aggregate": "`get_full_itsi_summary_service_health_events(da-itsi-cp-atlas-netflownetwork-traffic-analysis)` | timechart avg(health_score) AS aggregate",
+            "search_time_compare": "`get_full_itsi_summary_service_health_events(netflownetwork-health)` [| stats count | addinfo | eval search= \"earliest=\" + tostring(info_min_time-(info_max_time-info_min_time))+ \" latest=\" + tostring(info_max_time) |fields search] | addinfo | eval bucket=if(_time<info_max_time-((info_max_time-info_min_time)/2), \"last_window\", \"current_window\") | stats avg(health_score) AS aggregate BY bucket | reverse | delta aggregate AS window_delta | search bucket=current_window | eval window_direction=if(window_delta >0, \"increase\", if(window_delta < 0, \"decrease\", \"none\"))",
+            "search_time_series": "`get_full_itsi_summary_service_health_events(netflownetwork-health)` | timechart avg(health_score) AS aggregate",
+            "search_time_series_aggregate": "`get_full_itsi_summary_service_health_events(netflownetwork-health)` | timechart avg(health_score) AS aggregate",
             "search_time_series_entities": "",
             "search_type": "adhoc",
-            "service_title": "Network Traffic Analysis",
+            "service_title": "Network Health",
             "threshold_direction": "both",
             "threshold_eval": "",
             "threshold_field": "aggregate",
@@ -286,30 +286,24 @@
     "services_depends_on": [
         {
             "kpis_depending_on": [
-                "SHKPI-da-itsi-cp-atlas-netflowflow-collection"
+                "SHKPI-netflowtraffic-monitoring"
             ],
-            "service_id": "da-itsi-cp-atlas-netflowflow-collection"
+            "service_id": "netflowtraffic-monitoring"
         },
         {
             "kpis_depending_on": [
-                "SHKPI-da-itsi-cp-atlas-netflowflow-processing"
+                "SHKPI-netflowflow-analysis"
             ],
-            "service_id": "da-itsi-cp-atlas-netflowflow-processing"
+            "service_id": "netflowflow-analysis"
         },
         {
             "kpis_depending_on": [
-                "SHKPI-da-itsi-cp-atlas-netflowflow-visualization"
+                "SHKPI-netflowinterface-monitoring"
             ],
-            "service_id": "da-itsi-cp-atlas-netflowflow-visualization"
-        },
-        {
-            "kpis_depending_on": [
-                "SHKPI-da-itsi-cp-atlas-netflowflow-exporters"
-            ],
-            "service_id": "da-itsi-cp-atlas-netflowflow-exporters"
+            "service_id": "netflowinterface-monitoring"
         }
     ],
     "team_id": "default_itsi_security_group",
-    "title": "Network Traffic Analysis",
+    "title": "Network Health",
     "version": "0.0.1"
 }

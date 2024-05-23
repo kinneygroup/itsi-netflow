@@ -1,86 +1,71 @@
 ## Summary
-The ITSI Content Pack for NetFlow from Kinney Group is specifically designed to monitor network traffic and performance using NetFlow data. It leverages Splunk ITSI to provide in-depth analysis and visualization of network traffic, ensuring critical systems are operating optimally. This content pack is an essential tool for IT professionals looking to enhance the reliability and security of their network infrastructure.
+The ITSI Content Pack for NetFlow from Kinney Group is specifically designed to monitor the health and performance of network infrastructure. It leverages Splunk ITSI to provide in-depth analysis and visualization of network traffic, flows, and interface metrics, ensuring critical systems are operating optimally. This content pack is an essential tool for IT professionals looking to enhance the reliability and performance of their network infrastructure.
 
-* Comprehensive Network Traffic Analysis: Offers detailed insights into network traffic patterns, enabling optimized network performance and security.
-* Critical Data Collection and Processing: Monitors the real-time collection and processing of NetFlow data, helping IT professionals swiftly identify and address potential issues.
-* Enhanced Visualization: Facilitates better decision-making on network adjustments by visualizing processed NetFlow data through dashboards and reports.
+* Comprehensive Network Monitoring: Offers detailed insights into network traffic volume, flow analysis, and interface performance, enabling optimized network management.
+* Critical Network Health Tracking: Monitors the real-time operational status of network components, helping IT professionals swiftly identify and address potential issues.
+* Enhanced Network Efficiency: Facilitates better decision-making on network resource allocation and adjustments by analyzing performance trends and detecting inefficiencies.
 
 This ITSI Content Pack is open source and available for community collaboration and enhancement on [GitHub](https://www.github.com/kinneygroup).
 
 For more information about Kinney Group's Splunk Products, visit our [website](https://kinneygroup.com/atlas).
 
 ## Details
-The ITSI Content Pack for NetFlow contains service definitions and KPIs ready to import to ITSI. The KPI Thresholds and importance values are set to defaults so that they can be tuned manually for your use case. After configuration, this content pack provides a comprehensive view of network traffic and performance.
+The ITSI Content Pack for NetFlow contains service definitions and KPIs ready to import to ITSI. The KPI Thresholds and importance values are set to defaults so that they can be tuned manually for your use case. After configuration, this content pack provides a comprehensive view of network health and performance.
 
 [Kinney Group ITSI Content Pack Blog](https://kinneygroup.com/blog/installing-itsi-content-packs/)
 
 For more information about Kinney Group's Splunk Products, visit our [website](https://kinneygroup.com/atlas).
 
 ### Services
-NetFlow monitoring encompasses several specialized services, each targeting specific aspects of network traffic and performance:
+NetFlow monitoring encompasses several specialized services, each targeting specific aspects of network performance:
 
-1. Network Traffic Analysis
-    * Description: This service is responsible for the overall analysis of network traffic, including the collection, processing, and visualization of NetFlow data.
-    
-2. Flow Collection
-    * Description: This service handles the collection of NetFlow data from various network devices.
-    
-3. Flow Processing
-    * Description: This service processes the collected NetFlow data, including parsing, aggregation, and enrichment.
-    
-4. Flow Visualization
-    * Description: This service is responsible for visualizing the processed NetFlow data, providing dashboards and reports for network analysis.
-    
-5. Flow Exporters
-    * Description: This service involves the network devices configured to export NetFlow data to the collection service.
-    
+1. Network Health
+    * Description: Network Health is the overarching service that encompasses all aspects of network performance and health. It relies on detailed monitoring of traffic, flow, and interface metrics to provide a comprehensive view.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
+2. Traffic Monitoring
+    * Description: Traffic Monitoring is essential for understanding the amount and type of data being transferred over the network. It depends on analyzing traffic volume, protocol distribution, and identifying top talkers.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
+3. Flow Analysis
+    * Description: Flow Analysis focuses on the behavior of network sessions. It requires detailed metrics on the number of flows, their duration, and direction to identify potential issues.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
+4. Interface Monitoring
+    * Description: Interface Monitoring ensures that network interfaces are performing optimally and not overburdened. It relies on metrics like utilization and error rates.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
 
 ### KPIs
 Each service utilizes specific KPIs to measure its effectiveness:
 
-1. Flow Records Collected Count
-    * Description: Number of flow records collected from network devices.
-    
-2. Collection Latency
-    * Description: Time taken to collect flow records from network devices.
-    
-3. Collection Errors Count
-    * Description: Number of errors encountered during the collection of flow records.
-    
-4. Processed Flow Records Count
-    * Description: Number of flow records successfully processed.
-    
-5. Processing Latency
-    * Description: Time taken to process flow records.
-    
-6. Processing Errors Count
-    * Description: Number of errors encountered during the processing of flow records.
-    
-7. Dashboard Load Time
-    * Description: Time taken to load visualization dashboards.
-    
-8. Visualization Errors Count
-    * Description: Number of errors encountered in visualizing flow data.
-    
-9. Visualization Latency
-    * Description: Time taken to visualize processed flow data.
-    
-10. Exporter Availability
-    * Description: Availability status of flow exporters.
-    
-11. Exported Flow Records Count
-    * Description: Number of flow records exported by network devices.
-    
-12. Exporter Errors Count
-    * Description: Number of errors encountered by flow exporters.
-    
+1. Traffic Volume
+    * Description: Monitor the amount of data being transferred over the network.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
+2. Top Talkers
+    * Description: Identify the top sources and destinations of traffic.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
+3. Protocol Dist
+    * Description: Monitor the types of protocols being used and their respective traffic volumes.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
+4. Flow Count
+    * Description: Track the number of flows being created and terminated.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
+5. Latency
+    * Description: Measure the time it takes for data to travel from the source to the destination.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
+6. Interface Util
+    * Description: Monitor the utilization of network interfaces.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
+7. Errors
+    * Description: Track the rate of errors on the network.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
+8. Packet Loss
+    * Description: Monitor the percentage of packets that are lost during transmission.
+    * Source: [docs.netflowlogic.com](https://docs.netflowlogic.com/integrations-and-apps/integrations-with-splunk/)
 
 ### Relationships
 #### Dependencies:
-Services are interconnected; for instance, Network Traffic Analysis is dependent on Flow Collection, Flow Processing, and Flow Visualization. Similarly, Flow Processing relies on Flow Collection to provide the raw NetFlow data that needs to be processed.
+Services are interconnected; for instance, Network Health is dependent on Traffic Monitoring, Flow Analysis, and Interface Monitoring. Similarly, Traffic Monitoring relies on Volume Analysis, Protocol Distribution, and Top Talkers.
 
 #### Hierarchical Structure:
-Some services form a hierarchy, such as Flow Collection depending on Flow Exporters, illustrating a layered approach to network traffic monitoring where base metrics support broader performance indicators.
+Some services form a hierarchy, such as Traffic Monitoring depending on Volume Analysis, Protocol Distribution, and Top Talkers, illustrating a layered approach to performance monitoring where base metrics support broader performance indicators.
 
 ## Installation
 
