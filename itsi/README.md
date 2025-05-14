@@ -98,6 +98,7 @@ For more information about Kinney Group's Splunk Products, visit our [website](h
 | Version | Date  | Description                |
 |---------|-------|----------------------------|
 | 0.0.1   | 05/21/24 | Initial Preview Release    |
+| 1.0.0   | 05/14/25 | Documentation Update |
 
 ## Considerations:
 
