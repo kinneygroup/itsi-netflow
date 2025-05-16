@@ -1,5 +1,5 @@
 ## Summary
-The ITSI Content Pack for NetFlow from Kinney Group is specifically designed to monitor the health and performance of network infrastructure. It leverages Splunk ITSI to provide in-depth analysis and visualization of network traffic, flows, and interface metrics, ensuring critical systems are operating optimally. This content pack is an essential tool for IT professionals looking to enhance the reliability and performance of their network infrastructure.
+The ITSI Content Pack for NetFlow from Presidio Splunk Solutions is specifically designed to monitor the health and performance of network infrastructure. It leverages Splunk ITSI to provide in-depth analysis and visualization of network traffic, flows, and interface metrics, ensuring critical systems are operating optimally. This content pack is an essential tool for IT professionals looking to enhance the reliability and performance of their network infrastructure.
 
 * Comprehensive Network Monitoring: Offers detailed insights into network traffic volume, flow analysis, and interface performance, enabling optimized network management.
 * Critical Network Health Tracking: Monitors the real-time operational status of network components, helping IT professionals swiftly identify and address potential issues.
@@ -7,14 +7,14 @@ The ITSI Content Pack for NetFlow from Kinney Group is specifically designed to 
 
 This ITSI Content Pack is open source and available for community collaboration and enhancement on [GitHub](https://www.github.com/kinneygroup).
 
-For more information about Kinney Group's Splunk Products, visit our [website](https://kinneygroup.com/atlas).
+For more information about Presidio Splunk Solutions' Splunk Products, visit our [website](https://atlas.presidio.com).
 
 ## Details
 The ITSI Content Pack for NetFlow contains service definitions and KPIs ready to import to ITSI. The KPI Thresholds and importance values are set to defaults so that they can be tuned manually for your use case. After configuration, this content pack provides a comprehensive view of network health and performance.
 
-[Kinney Group ITSI Content Pack Blog](https://kinneygroup.com/blog/installing-itsi-content-packs/)
+[Presidio Splunk Solutions ITSI Content Pack Blog](https://kinneygroup.com/blog/installing-itsi-content-packs/)
 
-For more information about Kinney Group's Splunk Products, visit our [website](https://kinneygroup.com/atlas).
+For more information about Presidio Splunk Solutions' Splunk Products, visit our [website](https://atlas.presidio.com).
 
 ### Services
 NetFlow monitoring encompasses several specialized services, each targeting specific aspects of network performance:
@@ -79,27 +79,27 @@ Some services form a hierarchy, such as Traffic Monitoring depending on Volume A
 
 ## Troubleshooting
 
-[Kinney Group ITSI Content Pack Blog](https://kinneygroup.com/blog/installing-itsi-content-packs/)
+[Presidio Splunk Solutions ITSI Content Pack Blog](https://kinneygroup.com/blog/installing-itsi-content-packs/)
 
 [Github and Readme](https://www.github.com/kinneygroup)
 
-support@kinneygroup.com
+atlassupport@presidio.com
 
 ## Contact
 
 To provide feedback, visit our [Github and Readme](https://www.github.com/kinneygroup) for our content packs.
 
-support@kinneygroup.com
+atlassupport@presidio.com
 
-For more information about Kinney Group's Splunk Products, visit our [website](https://kinneygroup.com/atlas).
+For more information about Presidio Splunk Solutions' Splunk Products, visit our [website](https://atlas.presidio.com).
 
 ## Version History
 
 | Version | Date  | Description                |
 |---------|-------|----------------------------|
-| 0.0.1   | 05/21/24 | Initial Preview Release    |
+| 0.0.1   | 05/21/24 | Initial Preview Release |
 | 1.0.0   | 05/14/25 | Documentation Update |
 
 ## Considerations:
 
-[Kinney Group ITSI Content Pack Blog](https://kinneygroup.com/blog/installing-itsi-content-packs/)
+[Presidio Splunk Solutions ITSI Content Pack Blog](https://kinneygroup.com/blog/installing-itsi-content-packs/)
